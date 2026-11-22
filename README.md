@@ -20,13 +20,16 @@
 | | |
 |---|---|
 | **最新版本** | [v1.0.0](https://github.com/Rstrict/xueyiweng/releases/latest) |
-| **安装包** | `xueyiweng-v1.0.0.apk`（5.6 MB） |
+| **直接下载** | [**xueyiweng-v1.0.0.apk**](https://github.com/Rstrict/xueyiweng/releases/download/v1.0.0/xueyiweng-v1.0.0.apk)（5.6 MB） |
 | **最低系统** | Android 8.0（API 26） |
 | **适配系统** | Android 16（API 36） |
 
 ```bash
+# 用 adb 安装
 adb install xueyiweng-v1.0.0.apk
 ```
+
+或手机浏览器直接打开上面的「直接下载」链接。
 
 或把 APK 传到手机点击安装，需允许"安装未知来源应用"。
 
