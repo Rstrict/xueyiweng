@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  阶段 A / C 主体：问题居中作为唯一视觉焦点。
+  注意：不要用 layout_weight 撑高 —— 在 fillViewport 的 ScrollView 里
+  会让内容高度溢出到父容器，反而盖住下方的操作按钮。
+  居中的实现交给外层 FrameLayout 的 gravity。
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:minHeight="360dp"
+        android:paddingStart="22dp"
+        android:paddingEnd="22dp"
+        android:paddingTop="48dp"
+        android:paddingBottom="32dp">
+
+        <!-- 问题：全屏唯一视觉焦点 -->
+        <TextView
+            android:id="@+id/questionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:lineSpacingMultiplier="1.5"
+            android:letterSpacing="-0.012"
+            android:textColor="@color/ink" />
+
+        <TextView
+            android:id="@+id/sourceText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:textSize="13sp"
+            android:textColor="@color/ink2" />
+
+        <!-- 暂停备注：恢复时高亮展示，10 秒接上思路 -->
+        <TextView
+            android:id="@+id/pauseNoteCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/bg_note"
+            android:padding="14dp"
+            android:textSize="14sp"
+            android:lineSpacingMultiplier="1.4"
+            android:textColor="@color/ink"
+            android:visibility="gone" />
+    </LinearLayout>
+</ScrollView>

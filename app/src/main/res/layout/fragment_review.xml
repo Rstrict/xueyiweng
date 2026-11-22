@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="8dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:id="@+id/btnExit"
+            style="@style/Xyw.Button.Quiet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="‹ 返回"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/review_title"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="@color/ink"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:fontFamily="monospace"
+            android:textColor="@color/ink2"
+            android:text="1 / 1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/progressLine"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:orientation="horizontal"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp">
+
+            <!-- 问题 -->
+            <TextView
+                android:id="@+id/questionText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                android:lineSpacingMultiplier="1.55"
+                android:textColor="@color/ink"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp" />
+
+            <TextView
+                android:id="@+id/sourceText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="13sp"
+                android:textColor="@color/ink2"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/reviewHint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="12.5sp"
+                android:lineSpacingMultiplier="1.6"
+                android:textColor="@color/ink3"
+                android:layout_marginTop="16dp"
+                android:text="@string/review_hint" />
+
+            <!-- 揭开后的记录 -->
+            <LinearLayout
+                android:id="@+id/revealBlock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:visibility="gone" />
+
+            <!-- 自评 -->
+            <LinearLayout
+                android:id="@+id/rateBlock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/Xyw.Text.FieldLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/review_new_stuck"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/etNewStuck"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50dp"
+                    android:background="@drawable/bg_input"
+                    android:padding="13dp"
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    android:hint="如：还是分不清独立和互斥"
+                    android:textColor="@color/ink"
+                    android:textColorHint="@color/ink3"
+                    android:importantForAutofill="no"
+                    android:maxLength="200" />
+
+                <TextView
+                    style="@style/Xyw.Text.SectionLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/review_rate_title"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginBottom="10dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnIndependent"
+                    style="@style/Xyw.MasteryButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🟢  独立答出" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnNeedHint"
+                    style="@style/Xyw.MasteryButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="🟡  需要提示" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnRelearn"
+                    style="@style/Xyw.MasteryButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="🔴  仍没弄懂" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- 底部动作 -->
+    <LinearLayout
+        android:id="@+id/askActions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="18dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnShowHint"
+            style="@style/Xyw.Button.Ghost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/review_show_hint" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnReveal"
+            style="@style/Xyw.Button.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/review_reveal" />
+    </LinearLayout>
+</LinearLayout>

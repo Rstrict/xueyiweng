@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">学一问</string>
+
+    <!-- 首页 -->
+    <string name="home_title">今天</string>
+    <string name="home_question_label">这次学完，你想能回答什么？</string>
+    <string name="home_question_hint">例如：为什么样本方差要除以 n-1 ？</string>
+    <string name="home_source_label">资料位置（选填）</string>
+    <string name="home_source_hint">如：线代 P45 / 网课 12:30</string>
+    <string name="home_start">开始带着问题学</string>
+    <string name="home_phrase_hint">不知道怎么问？点选句式填入：</string>
+
+    <!-- 继续上一轮 -->
+    <string name="resume_title">继续上次未完成的一轮</string>
+    <string name="resume_discard">放弃</string>
+    <string name="resume_continue">继续这一轮</string>
+
+    <!-- 学习态 -->
+    <string name="stage_counter">阶段 %1$d/4 · %2$s</string>
+    <string name="btn_ready_to_test">我准备好自测了</string>
+    <string name="btn_pause_leave">暂停离开</string>
+    <string name="btn_brain_dump">记个杂念</string>
+    <string name="btn_wrote_it">写好了，去核对资料</string>
+    <string name="btn_paper_oral">已在纸上 / 口头作答</string>
+    <string name="btn_stuck">我卡住了</string>
+    <string name="btn_collapse_retry">收起资料，再答一遍</string>
+    <string name="btn_finish_round">完成，选掌握度</string>
+    <string name="btn_continue_timer">回来继续</string>
+
+    <!-- 盲答 -->
+    <string name="recall_hint">先合上资料，试着回答</string>
+    <string name="recall_input_label">写下你的思路（关键词即可）</string>
+    <string name="recall_input_hint">不必写全，先把想起来的丢出来…</string>
+    <string name="recall_empty_hint">写不出来也没关系 —— 直接开书核对，正是为了看见盲区。</string>
+    <string name="stuck_label">卡在哪里？（一句话就够）</string>
+    <string name="stuck_hint">如：说不出独立性到底适用在什么条件</string>
+    <string name="final_note_label">补充纠正 / 核心卡点（记一句触发词）</string>
+    <string name="final_note_hint">如：独立事件无记忆性，与不放回抽球区分</string>
+
+    <!-- 掌握度 -->
+    <string name="mastery_title">这轮掌握得怎么样？</string>
+    <string name="mastery_sub">选一个就保存 —— 首次作答、修正和卡点都会一起归档，并自动排进复习队列。</string>
+    <string name="mastery_independent">独立答出</string>
+    <string name="mastery_need_hint">需要提示</string>
+    <string name="mastery_relearn">仍没弄懂</string>
+
+    <!-- 复习 -->
+    <string name="review_title">今日复习</string>
+    <string name="review_hint">先在脑中、口头或草稿纸上完整回答一遍</string>
+    <string name="review_show_hint">需要一点提示（看卡点）</string>
+    <string name="review_reveal">已作答，展开完整记录</string>
+    <string name="review_back_to_question">再看一眼题</string>
+    <string name="review_last_attempt">上次作答</string>
+    <string name="review_stuck_points">卡点</string>
+    <string name="review_final_note">修正 / 结论</string>
+    <string name="review_rate_title">这次掌握得怎么样？</string>
+    <string name="review_new_stuck">这次有没有新的卡点？（选填）</string>
+
+    <!-- 题库 -->
+    <string name="archive_title">回顾与题库</string>
+    <string name="tab_today">今天</string>
+    <string name="tab_archive">回顾与题库</string>
+
+    <!-- 通用 -->
+    <string name="action_cancel">取消</string>
+    <string name="action_close">关闭</string>
+    <string name="action_save">保存</string>
+    <string name="action_delete">删除</string>
+    <string name="action_ok">好</string>
+    <string name="empty_no_review">今天没有要复习的题</string>
+    <string name="empty_no_review_sub">复习排期会自动找上门，不用打卡</string>
+    <string name="empty_no_records">还没有记录</string>
+</resources>

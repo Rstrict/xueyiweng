@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 浅色：暖米白纸感 -->
+    <color name="bg">#F7F6F2</color>
+    <color name="card">#FFFFFF</color>
+    <color name="card2">#F1EFE8</color>
+    <color name="ink">#1F2328</color>
+    <color name="ink2">#6E7781</color>
+    <color name="ink3">#9AA2AB</color>
+    <color name="line">#E4E1D8</color>
+    <color name="lineStrong">#D3CFC3</color>
+    <color name="accent">#2B5B84</color>
+    <color name="accentInk">#FFFFFF</color>
+    <color name="accentSoft">#E8EEF4</color>
+
+    <color name="green">#2E7D32</color>
+    <color name="amber">#D97706</color>
+    <color name="red">#C62828</color>
+    <color name="greenBg">#EAF3EA</color>
+    <color name="amberBg">#FBF0DF</color>
+    <color name="redBg">#F9E9E9</color>
+
+    <color name="scrim">#66141210</color>
+    <color name="transparent">#00000000</color>
+    <color name="iconBg">#2B5B84</color>
+</resources>

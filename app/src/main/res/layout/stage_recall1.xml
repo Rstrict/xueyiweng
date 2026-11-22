@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:clipToPadding="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="6dp">
+
+        <TextView
+            android:id="@+id/recallHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/recall_hint"
+            android:textSize="12.5sp"
+            android:textStyle="bold"
+            android:textColor="@color/accent"
+            android:background="@drawable/bg_badge"
+            android:paddingStart="11dp"
+            android:paddingEnd="11dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp" />
+
+        <TextView
+            android:id="@+id/questionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:lineSpacingMultiplier="1.55"
+            android:textColor="@color/ink" />
+
+        <!-- 文字作答 -->
+        <LinearLayout
+            android:id="@+id/textBlock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                style="@style/Xyw.Text.FieldLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/recall_input_label"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/etRecall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="130dp"
+                android:gravity="top|start"
+                android:background="@drawable/bg_input"
+                android:padding="14dp"
+                android:textSize="16sp"
+                android:lineSpacingMultiplier="1.5"
+                android:inputType="textMultiLine|textCapSentences"
+                android:hint="@string/recall_input_hint"
+                android:textColor="@color/ink"
+                android:textColorHint="@color/ink3"
+                android:importantForAutofill="no"
+                android:maxLength="1000" />
+
+            <TextView
+                style="@style/Xyw.Text.Hint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/recall_empty_hint" />
+        </LinearLayout>
+
+        <!-- 卡住 -->
+        <LinearLayout
+            android:id="@+id/stuckBlock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/Xyw.Text.FieldLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/stuck_label"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/etStuck"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="52dp"
+                android:background="@drawable/bg_input"
+                android:padding="14dp"
+                android:textSize="16sp"
+                android:inputType="text"
+                android:hint="@string/stuck_hint"
+                android:textColor="@color/ink"
+                android:textColorHint="@color/ink3"
+                android:importantForAutofill="no"
+                android:maxLength="200" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="1dp"
+            android:layout_height="24dp" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

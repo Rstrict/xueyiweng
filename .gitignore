@@ -1,0 +1,38 @@
+# Gradle
+.gradle/
+build/
+app/build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# 本地环境（含 SDK 绝对路径，绝不提交）
+local.properties
+
+# IDE
+.idea/
+*.iml
+.DS_Store
+*.hprof
+
+# Kotlin
+.kotlin/
+
+# 日志与临时文件
+*.log
+_*.mjs
+_dbgs*.mjs
+_edge-*/
+
+# 签名与密钥
+*.jks
+*.keystore
+!app/debug.keystore
+keystore.properties
+
+# 构建产物
+*.apk
+*.aab
+!docs/*.apk
+
+# 系统
+Thumbs.db
+desktop.ini
